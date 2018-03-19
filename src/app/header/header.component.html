@@ -1,0 +1,51 @@
+<!--Navbar-->
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark indigo">
+
+  <!-- Navbar brand -->
+  <logo><a class="navbar-brand" href="#">hmmm</a></logo>
+
+  <!-- Collapsible content -->
+  <links>
+
+    <!-- Links -->
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link waves-light" mdbRippleRadius>Home<span class="sr-only">(current)</span></a>
+      </li>
+
+      <!-- Dropdown -->
+      <li class="nav-item dropdown" dropdown>
+        <a dropdownToggle mdbRippleRadius type="button" class="nav-link dropdown-toggle waves-light" mdbRippleRadius>
+          Expansions<span class="caret"></span></a>
+        <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+          <a class="dropdown-item waves-light" mdbRippleRadius href="#">Standard</a>
+          <a class="dropdown-item waves-light" mdbRippleRadius href="#">Necroms and Paladirs</a>
+          <a class="dropdown-item waves-light" mdbRippleRadius href="#">Brotherhood of Oropo</a>
+        </div>
+      </li>
+
+      <!-- Dropdown -->
+      <li class="nav-item dropdown" dropdown>
+        <a dropdownToggle mdbRippleRadius type="button" class="nav-link dropdown-toggle waves-light" mdbRippleRadius>
+          Resources<span class="caret"></span></a>
+        <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+          <a class="dropdown-item waves-light" mdbRippleRadius href="#">Gods</a>
+          <a class="dropdown-item waves-light" mdbRippleRadius href="#">Cards</a>
+          <a class="dropdown-item waves-light" mdbRippleRadius href="#">Pedestals</a>
+          <a class="dropdown-item waves-light" mdbRippleRadius href="#">Trophies</a>
+          <a class="dropdown-item waves-light" mdbRippleRadius href="#">Treasures</a>
+        </div>
+      </li>
+
+    </ul>
+    <!-- Links -->
+
+    <!-- Search form -->
+    <form class="form-inline  waves-light" mdbRippleRadius>
+      <input class="form-control mr-sm-2" type="text" placeholder="Search">
+    </form>
+  </links>
+  <!-- Collapsible content -->
+
+</mdb-navbar>
+<!--/.Navbar-->
