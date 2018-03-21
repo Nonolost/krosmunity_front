@@ -1,51 +1,51 @@
-<!--Navbar-->
-<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark indigo">
-
-  <!-- Navbar brand -->
-  <logo><a class="navbar-brand" href="#">hmmm</a></logo>
-
-  <!-- Collapsible content -->
-  <links>
-
-    <!-- Links -->
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link waves-light" mdbRippleRadius>Home<span class="sr-only">(current)</span></a>
-      </li>
-
-      <!-- Dropdown -->
-      <li class="nav-item dropdown" dropdown>
-        <a dropdownToggle mdbRippleRadius type="button" class="nav-link dropdown-toggle waves-light" mdbRippleRadius>
-          Expansions<span class="caret"></span></a>
-        <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+<div class="container-fluid">
+  <div class="row" style="background-color:lightgrey;">
+    <div class="col">
+      <a href=""><img src="../../assets/discord.jpg" width="60"></a>
+      <a href="https://twitter.com/Lodesu_KM"><img src="../../assets/twitter.png" width="60"></a>
+    </div>
+    <div class="col-9" align="center">
+      <h1>Krosmunity</h1>
+    </div>
+    <div class="col">
+      <div class="row pull-right" style="margin-right: 0px;">
+        Language
+      </div>
+      <div style="clear:both;"></div>
+      <div class="row pull-right" style="margin-right: 0px;">
+        <a><img src="../../assets/fr.png" width="30"></a>
+        <a><img src="../../assets/en.png" width="30"></a>
+        <a><img src="../../assets/es.png" width="30"></a>
+      </div>
+    </div>
+  </div>
+  <div class="row  justify-content-md-center" style="background-color:grey;">
+    <div class="col-lg-6 col-md-auto" align="center">
+      <a href="/home" class="btn btn-primary waves-light" mdbRippleRadius>
+        Home
+      </a>
+      <div class="btn-group" dropdown>
+        <button dropdownToggle type="button" class="btn btn-primary dropdown-toggle waves-light" mdbRippleRadius>
+          Expansions
+        </button>
+        <div class="dropdown-menu dropdown-primary">
           <a class="dropdown-item waves-light" mdbRippleRadius href="#">Standard</a>
           <a class="dropdown-item waves-light" mdbRippleRadius href="#">Necroms and Paladirs</a>
           <a class="dropdown-item waves-light" mdbRippleRadius href="#">Brotherhood of Oropo</a>
         </div>
-      </li>
-
-      <!-- Dropdown -->
-      <li class="nav-item dropdown" dropdown>
-        <a dropdownToggle mdbRippleRadius type="button" class="nav-link dropdown-toggle waves-light" mdbRippleRadius>
-          Resources<span class="caret"></span></a>
-        <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
-          <a class="dropdown-item waves-light" mdbRippleRadius href="#">Gods</a>
-          <a class="dropdown-item waves-light" mdbRippleRadius href="#">Cards</a>
-          <a class="dropdown-item waves-light" mdbRippleRadius href="#">Pedestals</a>
-          <a class="dropdown-item waves-light" mdbRippleRadius href="#">Trophies</a>
-          <a class="dropdown-item waves-light" mdbRippleRadius href="#">Treasures</a>
+      </div>
+      <div class="btn-group" dropdown>
+        <button dropdownToggle type="button" class="btn btn-primary dropdown-toggle waves-light" mdbRippleRadius>
+          Resources
+        </button>
+        <div class="dropdown-menu dropdown-primary">
+          <a class="dropdown-item" mdbRippleRadius href="#">Gods</a>
+          <a class="dropdown-item" mdbRippleRadius href="/card">Cards</a>
+          <a class="dropdown-item" mdbRippleRadius href="#">Pedestals</a>
+          <a class="dropdown-item" mdbRippleRadius href="#">Trophies</a>
+          <a class="dropdown-item" mdbRippleRadius href="#">Treasures</a>
         </div>
-      </li>
-
-    </ul>
-    <!-- Links -->
-
-    <!-- Search form -->
-    <form class="form-inline  waves-light" mdbRippleRadius>
-      <input class="form-control mr-sm-2" type="text" placeholder="Search">
-    </form>
-  </links>
-  <!-- Collapsible content -->
-
-</mdb-navbar>
-<!--/.Navbar-->
+      </div>
+    </div>
+  </div>
+</div>
