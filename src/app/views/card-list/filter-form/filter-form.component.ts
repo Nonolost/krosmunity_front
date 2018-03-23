@@ -14,24 +14,50 @@ export class FilterFormComponent implements OnInit {
   isToken = false;
   isSpell = true;
   isMinion = true;
-  god: number = null;
+  god = -1;
   pageNumber = 0;
   pageContent = 10;
+  language: number;
+  atMin: number;
+  atMax: number;
+  apMin: number;
+  apMax: number;
+  hpMin: number;
+  hpMax: number;
+  mpMin: number;
+  mpMax: number;
+  rarity = -1;
+  extension: number;
+  content: string;
 
 
   godList = [
-    {value: 'null', viewValue: 'All'},
-    {value: '0', viewValue: 'Neutral'},
-    {value: '1', viewValue: 'Iop'},
-    {value: '2', viewValue: 'Cra'},
-    {value: '3', viewValue: 'Eniripsa'},
-    {value: '4', viewValue: 'Ecaflip'},
-    {value: '5', viewValue: 'Enutrof'},
-    {value: '6', viewValue: 'Sram'},
-    {value: '7', viewValue: 'Xelor'},
-    {value: '8', viewValue: 'Sacrieur'},
-    {value: '9', viewValue: 'Feca'},
-    {value: '10', viewValue: 'Sadida'},
+    {value: -1, viewValue: 'All'},
+    {value: 0, viewValue: 'Neutral'},
+    {value: 1, viewValue: 'Iop'},
+    {value: 2, viewValue: 'Cra'},
+    {value: 3, viewValue: 'Eniripsa'},
+    {value: 4, viewValue: 'Ecaflip'},
+    {value: 5, viewValue: 'Enutrof'},
+    {value: 6, viewValue: 'Sram'},
+    {value: 7, viewValue: 'Xelor'},
+    {value: 8, viewValue: 'Sacrieur'},
+    {value: 9, viewValue: 'Feca'},
+    {value: 10, viewValue: 'Sadida'},
+  ];
+
+  rarityList = [
+    {value: -1, viewValue: 'All'},
+    {value: 0, viewValue: 'Common'},
+    {value: 1, viewValue: 'Uncommon'},
+    {value: 2, viewValue: 'Rare'},
+    {value: 3, viewValue: 'Krosmique'},
+    {value: 4, viewValue: 'Infinite'},
+  ];
+
+  pageContentList = [
+    {value: 10, viewValue: '10'},
+    {value: 20, viewValue: '20'},
   ];
 
 
@@ -52,13 +78,59 @@ export class FilterFormComponent implements OnInit {
       } else {
         isSpellFilter = this.isSpell;
       }
-      const form = new FormElement(isSpellFilter, this.isToken, null, null, null, null, null, null, null, null, this.god, null, null, 0, null, 0, 100);
+      const form = new FormElement(isSpellFilter,
+        this.isToken,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        (this.god === -1) ? null : this.god,
+        (this.rarity === -1) ? null : this.rarity,
+        null,
+        0,
+        null,
+        this.pageNumber,
+        this.pageContent);
       this.cardService.loadCards(form).subscribe(
         data => this.displayedCards = data
       );
     } else {
       this.displayedCards = [];
     }
+  }
+
+
+  resetGod() {
+    if (this.rarity === 4) {
+      this.god = -1;
+    }
+  }
+
+  resetRarity() {
+    if (this.rarity === 4) {
+      this.rarity = -1;
+    }
+  }
+
+
+  pageUp() {
+    this.pageNumber++;
+    this.getFilteredCards();
+  }
+
+  pageDown() {
+    if (this.pageNumber > 0) {
+      this.pageNumber--;
+      this.getFilteredCards();
+    }
+  }
+
+  resetPage() {
+    this.pageNumber = 0;
   }
 
 }

@@ -1,43 +1,44 @@
-<mat-checkbox labelPosition=before (change)=getFilteredCards() [(ngModel)]="isSpell"
+<mat-checkbox labelPosition=before (change)="resetPage();getFilteredCards()" [(ngModel)]="isSpell"
               [ngModelOptions]="{standalone: true}">Spell
 </mat-checkbox>
-<mat-checkbox labelPosition=before (change)=getFilteredCards() [(ngModel)]="isMinion"
+<mat-checkbox labelPosition=before (change)="resetPage();getFilteredCards()" [(ngModel)]="isMinion"
               [ngModelOptions]="{standalone: true}">Minion
 </mat-checkbox>
-<mat-checkbox labelPosition=before (change)=getFilteredCards() [(ngModel)]="isToken"
+<mat-checkbox labelPosition=before (change)="resetPage();getFilteredCards()" [(ngModel)]="isToken"
               [ngModelOptions]="{standalone: true}">Token
 </mat-checkbox>
 
 <mat-form-field>
-  <mat-select [(value)]="god" (change)=getFilteredCards()>
+  <mat-select [(value)]="god" (change)="resetPage();resetRarity();getFilteredCards();">
     <mat-option *ngFor="let god of godList" [value]="god.value">
       {{ god.viewValue }}
     </mat-option>
   </mat-select>
 </mat-form-field>
 
+<mat-form-field>
+  <mat-select [(value)]="rarity" (change)="resetPage();resetGod();getFilteredCards();">
+    <mat-option *ngFor="let rarity of rarityList" [value]="rarity.value">
+      {{ rarity.viewValue }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
 
-<table>
-  <tbody>
-  <tr>
-    <th>Name</th>
-    <th>Hp</th>
-    <th>Ap</th>
-    <th>At</th>
-    <th>Mp</th>
-    <th>Description</th>
-    <th>isSpell</th>
-    <th>isToken</th>
-  </tr>
-  <tr *ngFor="let card of displayedCards">
-    <td>{{card.name}}</td>
-    <td>{{card.hp}}</td>
-    <td>{{card.ap}}</td>
-    <td>{{card.at}}</td>
-    <td>{{card.mp}}</td>
-    <td><p [innerHTML]=card.description></p></td>
-    <td>{{card.isSpell}}</td>
-    <td>{{card.isToken}}</td>
-  </tr>
-  </tbody>
-</table>
+<button mat-mini-fab (click)="pageDown()"><mat-icon>keyboard_arrow_left</mat-icon></button>
+<button mat-mini-fab (click)="pageUp()"><mat-icon>keyboard_arrow_right</mat-icon></button>
+
+<mat-form-field>
+  <mat-select [(value)]="pageContent" (change)="resetPage();getFilteredCards();">
+    <mat-option *ngFor="let number of pageContentList" [value]="number.value">
+      {{ number.viewValue }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+
+<div style="display: flex; flex-flow: wrap;">
+  <div
+    *ngFor="let card of displayedCards">
+    <img src="{{card.imageLink}}">
+  </div>
+</div>
