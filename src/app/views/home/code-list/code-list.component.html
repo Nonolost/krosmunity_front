@@ -1,0 +1,12 @@
+<table>
+  <tbody>
+  <tr>
+    <th>Code</th>
+    <th>Source</th>
+  </tr>
+  <tr *ngFor="let code of displayedCodes">
+    <td>{{code.code}}</td>
+    <td><a href={{code.sourceUrl}} target="_blank">{{code.source}}</a></td>
+  </tr>
+  </tbody>
+</table>

@@ -1,5 +1,4 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
-import {FilterFormComponent} from './filter-form/filter-form.component';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-card-list',
@@ -7,8 +6,6 @@ import {FilterFormComponent} from './filter-form/filter-form.component';
   styleUrls: ['./card-list.component.scss']
 })
 export class CardListComponent implements OnInit {
-
-  @ViewChild(FilterFormComponent) filterFormComponent: FilterFormComponent;
 
   ngOnInit() {
   }

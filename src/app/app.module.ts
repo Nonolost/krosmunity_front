@@ -1,5 +1,5 @@
 import {BrowserModule} from '@angular/platform-browser';
-import {NgModule, NO_ERRORS_SCHEMA} from '@angular/core';
+import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
 import {HeaderComponent} from './header/header.component';
@@ -13,10 +13,12 @@ import {TournamentStatsComponent} from './views/tournament-stats/tournament-stat
 import {TournamentListsComponent} from './views/tournament-lists/tournament-lists.component';
 import {CardService} from './services/card.service';
 import {HttpClientModule} from '@angular/common/http';
-import {AngularMaterialModule} from './angular.material.module';
+import {AngularMaterialModule} from './angularMaterialModule/angular.material.module';
 import {MDBBootstrapModule} from 'angular-bootstrap-md';
 import {FormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {CodeListComponent} from './views/home/code-list/code-list.component';
+import {CodeService} from './services/code.service';
 
 
 @NgModule({
@@ -29,7 +31,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     TierlistComponent,
     StatsComponent,
     TournamentStatsComponent,
-    TournamentListsComponent
+    TournamentListsComponent,
+    CodeListComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,7 +43,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     FormsModule,
     BrowserAnimationsModule
   ],
-  providers: [CardService],
+  providers: [CardService, CodeService],
   bootstrap: [AppComponent],
 })
 export class AppModule {
