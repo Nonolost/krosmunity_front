@@ -1,6 +1,6 @@
-import { TestBed, inject } from '@angular/core/testing';
+import {inject, TestBed} from '@angular/core/testing';
 
-import { StreamresultService } from './streamresult.service';
+import {StreamresultService} from './streamresult.service';
 
 describe('StreamresultService', () => {
   beforeEach(() => {

@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {Streamresult} from '../streamresult.model';
+import {Component, OnInit} from '@angular/core';
+import {Streamresult} from '../../../models/streamresult.model';
 import {StreamresultService} from '../../../services/streamresult.service';
 
 @Component({
@@ -10,7 +10,8 @@ import {StreamresultService} from '../../../services/streamresult.service';
 export class TwitchsearchstreamComponent implements OnInit {
   results: Streamresult[];
 
-  constructor(private searchUserservice: StreamresultService) { }
+  constructor(private searchUserservice: StreamresultService) {
+  }
 
   ngOnInit() {
     this.updateResults();

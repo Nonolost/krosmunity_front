@@ -1,13 +1,13 @@
-import { Injectable } from '@angular/core';
-import { Streamresult } from '../views/twitch/streamresult.model';
-import { Observable} from 'rxjs/Observable';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Http, Response} from '@angular/http';
-import { of } from 'rxjs/observable/of';
+import {Injectable} from '@angular/core';
+import {Streamresult} from '../models/streamresult.model';
+import {Observable} from 'rxjs/Observable';
+import {HttpHeaders} from '@angular/common/http';
+import {Http, Response} from '@angular/http';
+import {of} from 'rxjs/observable/of';
 import 'rxjs/add/operator/map';
 
 const httpOptions = {
-  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  headers: new HttpHeaders({'Content-Type': 'application/json'})
 };
 
 @Injectable()
@@ -16,7 +16,8 @@ export class StreamresultService {
   TWITCH_API_URL = 'https://api.twitch.tv/kraken/search/streams';
   LIMIT = '10';
 
-  constructor(private http: Http) { }
+  constructor(private http: Http) {
+  }
 
   search(query: string): Observable<Streamresult[]> {
     const queryUrl: string = this.TWITCH_API_URL + '?client_id=' + this.TWITCH_API_KEY + '&q=' + query + '&limit=10';
@@ -42,7 +43,7 @@ export class StreamresultService {
    * @param operation - name of the operation that failed
    * @param result - optional value to return as the observable result
    */
-  private handleError<T> (operation = 'operation', result?: T) {
+  private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
 
       // TODO: send the error to remote logging infrastructure

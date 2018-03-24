@@ -9,12 +9,12 @@ import {TournamentListsComponent} from './views/tournament-lists/tournament-list
 
 const appRoutes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
-  { path: 'home', component: HomeComponent },
-  { path: 'tierList', component: TierlistComponent },
-  { path: 'card', component: CardListComponent },
-  { path: 'stats', component: StatsComponent },
-  { path: 'tournamentStats', component: TournamentStatsComponent },
-  { path: 'tournamentList', component: TournamentListsComponent },
+  {path: 'home', component: HomeComponent},
+  {path: 'tierList', component: TierlistComponent},
+  {path: 'card', component: CardListComponent},
+  {path: 'stats', component: StatsComponent},
+  {path: 'tournamentStats', component: TournamentStatsComponent},
+  {path: 'tournamentList', component: TournamentListsComponent},
   {path: '**', redirectTo: 'home', pathMatch: 'full'}
 ];
 
@@ -27,4 +27,5 @@ const appRoutes: Routes = [
     RouterModule
   ]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule {
+}

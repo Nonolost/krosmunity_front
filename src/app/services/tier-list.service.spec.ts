@@ -1,6 +1,6 @@
-import { TestBed, inject } from '@angular/core/testing';
+import {inject, TestBed} from '@angular/core/testing';
 
-import { TierListService } from './tier-list.service';
+import {TierListService} from './tier-list.service';
 
 describe('TierListService', () => {
   beforeEach(() => {

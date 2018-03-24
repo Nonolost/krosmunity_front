@@ -1,5 +1,5 @@
-import { Component, Input } from '@angular/core';
-import { Streamresult} from '../streamresult.model';
+import {Component, Input} from '@angular/core';
+import {Streamresult} from '../../../models/streamresult.model';
 
 @Component({
   selector: 'app-searchresult',
@@ -10,7 +10,8 @@ export class SearchresultComponent {
   @Input()
   result: Streamresult;
 
-  constructor() { }
+  constructor() {
+  }
 
 
 }
