@@ -15,9 +15,12 @@ import { StatsComponent } from './views/stats/stats.component';
 import { TournamentStatsComponent } from './views/tournament-stats/tournament-stats.component';
 import { TournamentListsComponent } from './views/tournament-lists/tournament-lists.component';
 import { CodesComponent } from './views/codes/codes.component';
-import { TwitchComponent } from './views/twitch/twitch.component';
 import { NewsComponent } from './views/news/news.component';
+import {StreamresultService} from './services/streamresult.service';
+import { SearchresultComponent } from './views/twitch/searchresult/searchresult.component';
+import { TwitchsearchstreamComponent } from './views/twitch/twitchsearchstream/twitchsearchstream.component';
 
+import { HttpModule } from '@angular/http';
 
 
 @NgModule({
@@ -33,15 +36,17 @@ import { NewsComponent } from './views/news/news.component';
     TournamentStatsComponent,
     TournamentListsComponent,
     CodesComponent,
-    TwitchComponent,
     NewsComponent,
+    SearchresultComponent,
+    TwitchsearchstreamComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MDBBootstrapModule.forRoot()
+    MDBBootstrapModule.forRoot(),
+    HttpModule,
   ],
-  providers: [],
+  providers: [StreamresultService],
   bootstrap: [AppComponent],
   schemas: [ NO_ERRORS_SCHEMA ]
 })

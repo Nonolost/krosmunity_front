@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TwitchComponent } from './twitch.component';
+import { TwitchsearchstreamComponent } from './twitchsearchstream.component';
 
-describe('TwitchComponent', () => {
-  let component: TwitchComponent;
-  let fixture: ComponentFixture<TwitchComponent>;
+describe('TwitchsearchstreamComponent', () => {
+  let component: TwitchsearchstreamComponent;
+  let fixture: ComponentFixture<TwitchsearchstreamComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TwitchComponent ]
+      declarations: [ TwitchsearchstreamComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TwitchComponent);
+    fixture = TestBed.createComponent(TwitchsearchstreamComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
