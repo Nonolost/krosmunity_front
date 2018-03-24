@@ -1,6 +1,6 @@
 import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
-
+import {NgModule, NO_ERRORS_SCHEMA} from '@angular/core';
+import {MDBBootstrapModule} from 'angular-bootstrap-md';
 import {AppComponent} from './app.component';
 import {HeaderComponent} from './header/header.component';
 import {CardListComponent} from './views/card-list/card-list.component';
@@ -11,10 +11,14 @@ import {TierlistComponent} from './views/tierlist/tierlist.component';
 import {StatsComponent} from './views/stats/stats.component';
 import {TournamentStatsComponent} from './views/tournament-stats/tournament-stats.component';
 import {TournamentListsComponent} from './views/tournament-lists/tournament-lists.component';
+import {NewsComponent} from './views/news/news.component';
+import {StreamresultService} from './services/streamresult.service';
+import {SearchresultComponent} from './views/twitch/searchresult/searchresult.component';
+import {TwitchsearchstreamComponent} from './views/twitch/twitchsearchstream/twitchsearchstream.component';
+import {HttpModule} from '@angular/http';
 import {CardService} from './services/card.service';
 import {HttpClientModule} from '@angular/common/http';
 import {AngularMaterialModule} from './angularMaterialModule/angular.material.module';
-import {MDBBootstrapModule} from 'angular-bootstrap-md';
 import {FormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {CodeListComponent} from './views/home/code-list/code-list.component';
@@ -34,6 +38,10 @@ import {TierListService} from './services/tier-list.service';
     TournamentStatsComponent,
     TournamentListsComponent,
     CodeListComponent,
+    TournamentListsComponent,
+    NewsComponent,
+    SearchresultComponent,
+    TwitchsearchstreamComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,10 +50,12 @@ import {TierListService} from './services/tier-list.service';
     HttpClientModule,
     AngularMaterialModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpModule,
   ],
-  providers: [CardService, CodeService, TierListService],
+  providers: [CardService, CodeService, TierListService, StreamresultService],
   bootstrap: [AppComponent],
+  schemas: [NO_ERRORS_SCHEMA]
 })
 export class AppModule {
 }
