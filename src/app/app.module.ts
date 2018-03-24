@@ -19,6 +19,7 @@ import {FormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {CodeListComponent} from './views/home/code-list/code-list.component';
 import {CodeService} from './services/code.service';
+import {TierListService} from './services/tier-list.service';
 
 
 @NgModule({
@@ -43,7 +44,7 @@ import {CodeService} from './services/code.service';
     FormsModule,
     BrowserAnimationsModule
   ],
-  providers: [CardService, CodeService],
+  providers: [CardService, CodeService, TierListService],
   bootstrap: [AppComponent],
 })
 export class AppModule {
