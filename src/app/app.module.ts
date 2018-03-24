@@ -15,7 +15,6 @@ import {NewsComponent} from './views/news/news.component';
 import {StreamresultService} from './services/streamresult.service';
 import {SearchresultComponent} from './views/twitch/searchresult/searchresult.component';
 import {TwitchsearchstreamComponent} from './views/twitch/twitchsearchstream/twitchsearchstream.component';
-import {HttpModule} from '@angular/http';
 import {CardService} from './services/card.service';
 import {HttpClientModule} from '@angular/common/http';
 import {AngularMaterialModule} from './angularMaterialModule/angular.material.module';
@@ -51,7 +50,6 @@ import {TierListService} from './services/tier-list.service';
     AngularMaterialModule,
     FormsModule,
     BrowserAnimationsModule,
-    HttpModule,
   ],
   providers: [CardService, CodeService, TierListService, StreamresultService],
   bootstrap: [AppComponent],

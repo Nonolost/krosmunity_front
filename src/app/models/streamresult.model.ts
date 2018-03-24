@@ -5,7 +5,6 @@ export class Streamresult {
   display_name: string;
   language: string;
   viewers: string;
-  followers: string;
   logo: string;
   url: string;
 
@@ -15,7 +14,6 @@ export class Streamresult {
     this.display_name = obj.display_name;
     this.language = obj.language;
     this.viewers = obj.viewers;
-    this.followers = obj.followers;
     this.logo = obj.logo;
     this.url = obj.url;
   }
