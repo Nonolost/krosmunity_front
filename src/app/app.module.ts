@@ -13,8 +13,7 @@ import {TournamentStatsComponent} from './views/tournament-stats/tournament-stat
 import {TournamentListsComponent} from './views/tournament-lists/tournament-lists.component';
 import {NewsComponent} from './views/news/news.component';
 import {StreamresultService} from './services/streamresult.service';
-import {SearchresultComponent} from './views/twitch/searchresult/searchresult.component';
-import {TwitchsearchstreamComponent} from './views/twitch/twitchsearchstream/twitchsearchstream.component';
+import {TwitchsearchstreamComponent} from './views/twitch/twitch.component';
 import {CardService} from './services/card.service';
 import {HttpClientModule} from '@angular/common/http';
 import {AngularMaterialModule} from './angularMaterialModule/angular.material.module';
@@ -23,6 +22,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {CodeListComponent} from './views/home/code-list/code-list.component';
 import {CodeService} from './services/code.service';
 import {TierListService} from './services/tier-list.service';
+import { TierPipe } from './pipes/tier.pipe';
 
 
 @NgModule({
@@ -39,8 +39,8 @@ import {TierListService} from './services/tier-list.service';
     CodeListComponent,
     TournamentListsComponent,
     NewsComponent,
-    SearchresultComponent,
     TwitchsearchstreamComponent,
+    TierPipe,
   ],
   imports: [
     BrowserModule,

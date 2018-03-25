@@ -1,14 +1,14 @@
 <div class="container-fluid">
-  <div class="row" style="background-color:lightgrey;">
+  <div class="row">
     <div class="col">
       <a href=""><img src="../../assets/discord.jpg" width="60"></a>
       <a href="https://twitter.com/Lodesu_KM"><img src="../../assets/twitter.png" width="60"></a>
     </div>
     <div class="col-9" align="center">
-      <h1>Krosmunity</h1>
+      <h1 style="color: white;">Krosmunity</h1>
     </div>
     <div class="col">
-      <div class="row pull-right" style="margin-right: 0;">
+      <div class="row pull-right" style="margin-right: 0; color:white;">
         Language
       </div>
       <div style="clear:both;"></div>
@@ -19,33 +19,35 @@
       </div>
     </div>
   </div>
-  <div class="row  justify-content-md-center" style="background-color:grey;">
-    <div class="col-lg-6 col-md-auto" align="center">
-      <a href="/home" class="btn btn-primary waves-light" mdbRippleRadius>
-        Home
-      </a>
-      <div class="btn-group" dropdown>
-        <button dropdownToggle type="button" class="btn btn-primary dropdown-toggle waves-light" mdbRippleRadius>
-          Expansions
-        </button>
-        <div class="dropdown-menu dropdown-primary">
-          <a class="dropdown-item waves-light" mdbRippleRadius href="#">Standard</a>
-          <a class="dropdown-item waves-light" mdbRippleRadius href="#">Necroms and Paladirs</a>
-          <a class="dropdown-item waves-light" mdbRippleRadius href="#">Brotherhood of Oropo</a>
-        </div>
-      </div>
-      <div class="btn-group" dropdown>
-        <button dropdownToggle type="button" class="btn btn-primary dropdown-toggle waves-light" mdbRippleRadius>
-          Resources
-        </button>
-        <div class="dropdown-menu dropdown-primary">
-          <a class="dropdown-item" mdbRippleRadius href="#">Gods</a>
-          <a class="dropdown-item" mdbRippleRadius href="/card">Cards</a>
-          <a class="dropdown-item" mdbRippleRadius href="#">Pedestals</a>
-          <a class="dropdown-item" mdbRippleRadius href="#">Trophies</a>
-          <a class="dropdown-item" mdbRippleRadius href="#">Treasures</a>
-        </div>
-      </div>
-    </div>
+  <div class="row  justify-content-md-center" style="background-color:rgba(28,28,28,0.5);">
+      <ul class="my-navbar">
+        <li class="dropdown">
+          <a href="/home" class="home-link" mdbRippleRadius>
+            Home
+          </a>
+        </li>
+        <li class="dropdown">
+          <div class="dropbtn">
+            Expansions
+          </div>
+          <div class="dropdown-content">
+            <a class="dropdown-item waves-light" mdbRippleRadius href="#">Standard</a>
+            <a class="dropdown-item waves-light" mdbRippleRadius href="#">Necroms and Paladirs</a>
+            <a class="dropdown-item waves-light" mdbRippleRadius href="#">Brotherhood of Oropo</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <div class="dropbtn">
+            Resources
+          </div>
+          <div class="dropdown-content">
+            <a class="dropdown-item" mdbRippleRadius href="#">Gods</a>
+            <a class="dropdown-item" mdbRippleRadius href="/card">Cards</a>
+            <a class="dropdown-item" mdbRippleRadius href="#">Pedestals</a>
+            <a class="dropdown-item" mdbRippleRadius href="#">Trophies</a>
+            <a class="dropdown-item" mdbRippleRadius href="#">Treasures</a>
+          </div>
+        </li>
+      </ul>
   </div>
 </div>

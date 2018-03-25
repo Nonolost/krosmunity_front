@@ -10,6 +10,19 @@ import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
 })
 export class TierlistComponent implements OnInit {
 
+  godList = [
+    {value: 0, viewValue: 'Neutral'},
+    {value: 1, viewValue: 'iop'},
+    {value: 2, viewValue: 'cra'},
+    {value: 3, viewValue: 'eniripsa'},
+    {value: 4, viewValue: 'ecaflip'},
+    {value: 5, viewValue: 'enutrof'},
+    {value: 6, viewValue: 'sram'},
+    {value: 7, viewValue: 'xelor'},
+    {value: 8, viewValue: 'sacrieur'},
+    {value: 9, viewValue: 'feca'},
+    {value: 10, viewValue: 'sadida'},
+  ];
 
   tierList: TierListDTO[];
   displayedColumns = ['name', 'god', 'author', 'type', 'tier', 'note', 'kamasPrice', 'dustPrice', 'krosbuilderLink'];
@@ -26,15 +39,5 @@ export class TierlistComponent implements OnInit {
     this.tierListService.loadTierList().subscribe(
       data => this.tierList = data
     );
-    this.dataSource = new MatTableDataSource(this.tierList);
-    this.dataSource.paginator = this.paginator;
-    this.dataSource.sort = this.sort;
   }
-
-  applyFilter(filterValue: string) {
-    filterValue = filterValue.trim(); // Remove whitespace
-    this.filter = filterValue.toLowerCase(); // Datasource defaults to lowercase matches
-    this.dataSource.filter = this.filter;
-  }
-
 }

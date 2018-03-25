@@ -1,0 +1,14 @@
+<div class="div_stream">
+  <h4 style="color: white;">Stream online</h4>
+  <div class="row row_stream" style="width:100%;" *ngFor="let result of results">
+    <a class="link_stream" href="{{result.url}}">
+        <img src="../../../../assets/{{result.language}}.png" style="width:25px; height:25px;">
+        <p class="name_twitch">{{result.display_name}}</p>
+        <span class="viewers">
+          <span class="sc-live-indicator"></span>
+          {{result.viewers}}
+        </span>
+
+    </a>
+  </div>
+</div>

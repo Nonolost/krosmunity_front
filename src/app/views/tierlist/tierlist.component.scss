@@ -1,0 +1,30 @@
+.deck_row {
+  height: 100px;
+  width: 100%;
+  font-size: 2em;
+}
+
+.deck_row a {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-color:#0A1527;
+  padding-left: 20%;
+  color: white;
+  border: 3px white solid;
+  margin-bottom: 5px;
+}
+
+.deck_row:hover a {
+  filter: brightness(150%);
+}
+
+.tier {
+  color: white;
+  margin-top:10px;
+}
+
+.deck {
+}

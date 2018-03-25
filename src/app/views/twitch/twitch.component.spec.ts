@@ -1,6 +1,6 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import {TwitchsearchstreamComponent} from './twitchsearchstream.component';
+import {TwitchsearchstreamComponent} from './twitch';
 
 describe('TwitchsearchstreamComponent', () => {
   let component: TwitchsearchstreamComponent;

@@ -1,12 +1,6 @@
-<table>
-  <tbody>
-  <tr>
-    <th>Code</th>
-    <th>Source</th>
-  </tr>
-  <tr *ngFor="let code of displayedCodes">
-    <td>{{code.code}}</td>
-    <td><a href={{code.sourceUrl}} target="_blank">{{code.source}}</a></td>
-  </tr>
-  </tbody>
-</table>
+<div>
+  <h4 class="title_code">Available codes</h4>
+  <div class="row row_code" *ngFor="let code of displayedCodes">
+    <span>{{code.code}}</span><a href={{code.sourceUrl}} class="link-code"><i class="material-icons">keyboard_arrow_right</i></a>
+  </div>
+</div>
