@@ -1,13 +1,13 @@
 import {NgModule} from '@angular/core';
 import {
-  MatButtonModule,
+  MatButtonModule, MatButtonToggleModule,
   MatCheckboxModule,
   MatFormFieldModule,
   MatIconModule,
   MatInputModule,
   MatOptionModule,
   MatPaginatorModule,
-  MatSelectModule,
+  MatSelectModule, MatSliderModule,
   MatSortModule,
   MatTableModule
 } from '@angular/material';
@@ -25,6 +25,8 @@ import {
     MatSortModule,
     MatTableModule,
     MatInputModule,
+    MatSliderModule,
+    MatButtonToggleModule,
 
   ],
   exports: [
@@ -38,6 +40,8 @@ import {
     MatSortModule,
     MatTableModule,
     MatInputModule,
+    MatSliderModule,
+    MatButtonToggleModule,
   ],
   declarations: []
 })

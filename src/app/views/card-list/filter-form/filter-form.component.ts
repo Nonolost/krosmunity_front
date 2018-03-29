@@ -17,15 +17,11 @@ export class FilterFormComponent implements OnInit {
   god = -1;
   pageNumber = 0;
   pageContent = 10;
+  apValue = null;
+  atValue = null;
+  mpValue = null;
+  hpValue = null;
   language: number;
-  atMin: number;
-  atMax: number;
-  apMin: number;
-  apMax: number;
-  hpMin: number;
-  hpMax: number;
-  mpMin: number;
-  mpMax: number;
   rarity = -1;
   extension: number;
   content: string;
@@ -56,8 +52,8 @@ export class FilterFormComponent implements OnInit {
   ];
 
   pageContentList = [
+    {value: 5, viewValue: '5'},
     {value: 10, viewValue: '10'},
-    {value: 20, viewValue: '20'},
   ];
 
 
@@ -78,16 +74,28 @@ export class FilterFormComponent implements OnInit {
       } else {
         isSpellFilter = this.isSpell;
       }
+      const apMin = this.apValue;
+      const apMax = this.apValue === 7 ? null : this.apValue;
+
+      const atMin = this.atValue;
+      const atMax = this.atValue === 7 ? null : this.atValue;
+
+      const hpMin = this.hpValue;
+      const hpMax = this.hpValue === 7 ? null : this.hpValue;
+
+      const mpMin = this.mpValue;
+      const mpMax = this.mpValue === 5 ? null : this.mpValue;
+
       const form = new FormElement(isSpellFilter,
         this.isToken,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        hpMin,
+        hpMax,
+        apMin,
+        apMax,
+        mpMin,
+        mpMax,
+        atMin,
+        atMax,
         (this.god === -1) ? null : this.god,
         (this.rarity === -1) ? null : this.rarity,
         null,
@@ -113,6 +121,12 @@ export class FilterFormComponent implements OnInit {
   resetRarity() {
     if (this.rarity === 4) {
       this.rarity = -1;
+    }
+  }
+
+  notToken() {
+    if (this.rarity === 4) {
+      this.isToken = false;
     }
   }
 

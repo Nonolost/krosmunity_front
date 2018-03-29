@@ -1,0 +1,27 @@
+mat-button-toggle-group {
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  cursor: pointer; /* Pointer/hand icon */
+}
+
+mat-button-toggle-group:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/*.selector-title {
+  width: 40px;
+}*/
+
+.selector-row {
+  display: flex;
+  align-items: center;
+}
+
+.selector-title {
+  padding-right: 3px;
+  width: 40px;
+}
+
+.footer {
+  bottom: 0;
+}
